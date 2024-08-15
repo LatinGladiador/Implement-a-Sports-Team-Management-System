@@ -1,99 +1,96 @@
-# Implement a Sports Team Management System in C
+# Soccer Team Management System
 
-## Problem Description
+![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)
+![Estado del Proyecto](https://img.shields.io/badge/estado-finalizado-green.svg)
+![Versión](https://img.shields.io/badge/versión-1.0.0-brightgreen.svg)
 
-The goal of this assignment is to apply your knowledge of Structures, Arrays, and Enumerations in C to create a sports team management system. You will handle a team of players, with each player having different attributes including their position on the field. The system will allow the user to add players, delete players, display team details, search for a specific player, and update player information.
+Este es un proyecto en C para gestionar la información de un equipo de fútbol. El sistema permite agregar, eliminar, actualizar, buscar y mostrar jugadores del equipo. Los datos de los jugadores se gestionan a través de un archivo de entrada y los resultados se escriben en un archivo de salida.
 
-### General Idea
+## 📋 Descripción
 
-1. Define a Player Position Enumeration: Define an enumeration Position that includes all possible positions a player can have (Goalkeeper, Defender, Midfielder, Forward).
-2. Define a Player Structure: Define a structure Player that should have the following attributes [unique ID, name, position (of Position enum type), age, and number of goals scored].
-3. Create an Array of Structures: Create an array of Player structures to store the player data for the entire team.
-4. Add Players: Implement a function to add new players to the team. Each player should have a unique ID, name, position, age, and number of goals scored. It is impossible to add a new player with an already existing ID.
-5. Delete Players: Implement a function to delete a player from the team using the player's unique ID.
-6. Display Team: Implement a function to display all the players in the team along with their details.
-7. Search Players: Implement a function to search for a specific player using the player's unique ID.
-8. Update Player Info: Implement a function to update the information of a player using the player's unique ID.
+El **Soccer Team Management System** maneja la información de los jugadores de un equipo de fútbol, incluyendo su identificación, nombre, posición, edad y goles. Utiliza funciones para validar datos, agregar y eliminar jugadores, actualizar información y buscar jugadores por ID.
 
-### Input Format
+## 🛠️ Tecnologías Utilizadas
 
-The input file will contain multiple lines starting with commands like (Add, Delete, Update …) and ending with a Display command.
+- **C**: Lenguaje de programación utilizado para implementar la lógica del sistema.
+- **Estructuras**: Para representar y gestionar la información de los jugadores.
+- **Archivos**: Para la entrada y salida de datos.
 
-All commands should start with an uppercase letter and should be followed by the arguments needed for the command.
+## 🏗️ Instalación
 
-### Output Format
+Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
-Your solution should be written to output.txt and it should end with a newline character.
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/LatinGladiador/Implement-a-Sports-Team-Management-System.git
+   ```
 
-### Examples
+2. **Navega al directorio del proyecto**:
+   ```bash
+   cd Implement-a-Sports-Team-Management-System
+   ```
 
-**input.txt**:
-Add
-7
-Ahmad
-Defender
-25
-10
-Update
-7
-Ahmad
-Defender
-26
-50
-Add
-1
-Munir
-Goalkeeper
-31
-89
-Delete
-7
-Display
+3. **Compila el archivo C**:
+   ```bash
+   gcc -o Implement-a-Sports-Team-Management-System Main.c
+   ```
 
-**output.txt**:
-ID: 1, Name: Munir, Position: Goalkeeper, Age: 31, Goals: 89
+4. **Ejecuta el programa**:
+   ```bash
+   ./Implement-a-Sports-Team-Management-System
+   ```
 
-**input.txt**:
-Add
-1
-Alaa
-Forward
-25
-100
-Update
-1
-Munir
-Forward
-25
-100
-Search
-1
-Display
+   Asegúrate de tener los archivos `input.txt` y `output.txt` en el directorio donde ejecutas el programa.
 
-**output.txt**:
-Found
-ID: 1, Name: Munir, Position: Forward, Age: 25, Goals: 100
+## 🖥️ Uso
 
-**input.txt**:
-Add
-12
-Jay
-Forward
-25
-100
-Update
-12
-Munir
-Forward
-25
-100
-Search
-1
-Delete
-1
-Display
+1. **Prepara el archivo de entrada** `input.txt` con las operaciones deseadas (Add, Delete, Display, Search, Update) y sus parámetros.
+2. **Ejecuta el programa**.
+3. **Consulta el archivo de salida** `output.txt` para ver los resultados de las operaciones.
 
-**output.txt**:
-Not found
-Impossible to delete
-ID: 12, Name: Munir, Position: Forward, Age: 25, Goals: 100
+   Ejemplo de `input.txt`:
+   ```
+   Add 1 John Forward 25 10
+   Display
+   Search 1
+   Update 1 John Midfielder 26 15
+   Delete 1
+   ```
+
+   Ejemplo de `output.txt`:
+   ```
+   ID: 1, Name: John, Position: Forward, Age: 25, Goals: 10
+   Found
+   ```
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir, sigue estos pasos:
+
+1. **Haz un fork del repositorio**.
+2. **Crea una nueva rama** para tus cambios:
+   ```bash
+   git checkout -b feature/nueva-caracteristica
+   ```
+3. **Realiza tus cambios y haz commit**:
+   ```bash
+   git commit -m "Añadida nueva característica"
+   ```
+4. **Empuja tu rama**:
+   ```bash
+   git push origin feature/nueva-caracteristica
+   ```
+5. **Abre un Pull Request** en GitHub.
+
+## 👤 Autor
+
+Este proyecto fue creado y es mantenido por [LatinGladiador](https://github.com/LatinGladiador).
+
+
+## 📜 Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+
+---
+
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
